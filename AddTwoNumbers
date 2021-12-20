@@ -1,0 +1,16 @@
+package lab21;
+import java.util.*;
+public class Add2Numbers 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the First number= ");
+		double  firstnum = sc.nextDouble();
+		System.out.println("Ennter the second number = ");
+		double secondnum = sc.nextDouble();
+		sc.close();
+		double sum=firstnum+secondnum;
+		System.out.println("Sum = "+sum);
+	}
+}
