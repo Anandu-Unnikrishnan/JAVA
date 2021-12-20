@@ -1,0 +1,28 @@
+package practiceProblems1;
+class Student1
+{
+	int rollno;
+	String name,address,phnnum;
+	void Details(int r,String n,String a,String p)
+	{
+		name = n;
+		address = a;
+		phnnum = p;
+		rollno = r;
+		System.out.println("NAME: "+n);
+		System.out.println("ROLL NUMBER: "+r);
+		System.out.println("ADDRESS: "+a);
+		System.out.println("PHONE NUMBER: "+p);
+	}
+}
+
+public class StudentDetails 
+{
+	public static void main(String[] args)
+	{
+		Student1 ob = new Student1();Student1 ob1 = new Student1();
+		System.out.println("---DETAILS---");
+		ob.Details(15, "JOHN", "MANCHESTER", "9633938638\n");
+		ob1.Details(25, "SAM", "LEISTER", "9863256588");
+	}
+}
