@@ -1,0 +1,33 @@
+/* Author : ANANDU UNNIKRISHNAN
+   NAME: Area and perimeter of triangle without using parameterised constructor
+*/
+
+package practiceProblems1;
+import java.util.Scanner;
+class Triangle
+   {
+    int base,alt,hypo;
+    float Perimeter()
+       {
+	     return (base+alt+hypo);
+       }
+    double Area()
+    {
+	return (0.5*base*alt);
+	}
+   }
+
+public class AreaAndPerimeterOfTriangle
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		Triangle ob = new Triangle();
+	    ob.base =3;
+		ob.alt=4;
+		ob.hypo=5;
+		System.out.println("AREA ="+ob.Area());
+		System.out.println("PERIMETER= "+ob.Perimeter());
+		sc.close();
+	}
+}
