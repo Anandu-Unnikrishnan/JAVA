@@ -1,0 +1,48 @@
+package lab21;
+import java.util.*;
+public class Calculator 
+{
+
+ 	public static void main(String[] args)
+	{
+      int x=0;
+ 	  do 
+ 	  {
+ 		 Scanner sc = new Scanner(System.in);
+ 	     System.out.println("Enter the first number : ");
+         double output=0,num1,num2;
+         num1 = sc.nextDouble();
+         System.out.println("Enter the second number: ");
+         num2 = sc.nextDouble();
+         System.out.println("Enter an operator(+ - * /): ");
+         char op;
+         op = sc.next().charAt(0);
+         
+         switch (op)
+         {
+         case '+':
+         	output = num1+num2;
+         	break;
+         case '-':
+         	output = num1-num2;
+         	break;
+         case '*':
+         	output = num1*num2;
+         	break;
+         case '/':
+         	output = num1/num2;
+         	break;
+         default :
+         	System.out.println("Invalid operation!");
+         	break;
+         }
+         System.out.println("The output is : "+output);
+         System.out.println("Do you want to continue(Y/N)?: ");
+         char selector = sc.next().charAt(0);
+         if(selector == 'y'||selector=='Y')
+         {
+             x++;
+         }sc.close();
+ 	  }while(x!=0);
+	}
+}
