@@ -1,0 +1,52 @@
+package java_remedial;
+import java.util.Scanner;
+
+class EmpInfo
+{
+	int empcode;
+	String fn,ln,designation,salary,doj;
+	void getData(int emp, String fn,String ln, String des, String doj, String sal)
+	{
+		empcode = emp;
+		designation = des;
+		salary = sal;
+		this.doj= doj;
+		this.fn= fn;
+		this.ln = ln;
+	}
+	void Display()
+	{
+		System.out.println("EMPLOYEE CODE: "+empcode);
+		System.out.println("NAME: "+fn+" "+ln);
+		System.out.println("DESIGNATION: "+designation);
+		System.out.println("DATE OF JOINING: "+doj);
+		System.out.println("SALARY: "+salary+"/-");
+	}
+}
+public class Problem1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Employee Code: ");
+		int empcode = sc.nextInt(); 
+		System.out.println("Enter the First name of the employee: ");
+		String fn = sc.next();
+		System.out.println("Enter the Last name of the employee: ");
+	    String ln = sc.next();
+		System.out.println("Enter the Designation: ");
+		String designation = sc.next();
+		System.out.println("Enter the date of joining (DD-MM-YYYY) : ");
+		String doj = sc.next();
+		System.out.println("Enter the salary: ");
+		String salary = sc.next();
+		
+		EmpInfo ob = new EmpInfo();
+		ob.getData(empcode, fn, ln, designation, doj, salary);
+		ob.Display();
+		sc.close();
+		
+	}
+
+}
