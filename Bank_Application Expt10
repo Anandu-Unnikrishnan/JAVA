@@ -23,22 +23,26 @@ class BankDetails
 	private String name;
 	private int balance;
 	Scanner sc = new Scanner(System.in);
+	String acctype;
 
 	public void openAccount() 
 	{
-		System.out.print("Enter Account No: ");
+		System.out.print("Account Type: ");
+		acctype = sc.next();
+		System.out.print("Account No: ");
 		accno = sc.next();
-		System.out.print("Enter Name: ");
+		System.out.print("Account Holder: ");
 		name = sc.next();
-		System.out.print("Enter Balance: ");
+		System.out.print("Account Balance: ");
 		balance = sc.nextInt();
 	}
 
 	public void showAccount() 
 	{
-		System.out.println("Name of account holder: " + name);
-		System.out.println("Account no.: " + accno);
-		System.out.println("Balance: " + balance);
+		System.out.println(name);
+		System.out.println(acctype);
+		System.out.println(accno);
+		System.out.println(balance);
 	}
 
 	public void deposit()
@@ -114,15 +118,13 @@ public class Expt10
 			C[i] = new BankDetails();
 			C[i].openAccount();
 		}
-
 		int ch;
+		System.out.println("--BANK APPLICATION--\n1. Display all accounts \n2. Search by Account number\n3. Deposit  amount \n4. Withdraw\n5. Exit ");
+		System.out.println("\n============================================");
+		
 		do {
-			System.out.println(
-					"1. Display all account details \n2. Search by Account number\n3. Deposit the amount \n4. Withdraw the amount \n5. Exit ");
-			System.out.print("Enter your choice: ");
+			System.out.print("\nEnter your choice: ");
 			ch = sc.nextInt();
-			System.out.println("\n============================================");
-
 			switch (ch) 
 			{
 			case 1:
@@ -132,7 +134,7 @@ public class Expt10
 				}
 				break;
 			case 2:
-				System.out.print("Enter account no. you want to search: ");
+				System.out.print("Enter account no. : ");
 				String ac_no = sc.next();
 				boolean found = false;
 				for (int i = 0; i < C.length; i++) 
@@ -192,4 +194,6 @@ public class Expt10
 		sc.close();
 	}
 }
+
+
 
